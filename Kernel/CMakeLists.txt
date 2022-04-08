@@ -411,27 +411,6 @@ else()
         ${PREKERNEL_SOURCES}
         ${RPI_SOURCES}
 
-        Arch/aarch64/BootPPMParser.cpp
-        Arch/aarch64/CrashHandler.cpp        
-        Arch/aarch64/MainIdRegister.cpp        
-        Arch/aarch64/PageDirectory.cpp
-        Arch/aarch64/Utils.cpp
-
-        Arch/aarch64/Dummy.cpp
-
-        # Preload specific
-        Arch/aarch64/init.cpp
-        Arch/aarch64/PrekernelMMU.cpp
-        Arch/aarch64/PrekernelExceptions.cpp
-        Arch/aarch64/PrekernelCommon.cpp
-
-        # Assembly
-        Arch/aarch64/boot.S
-        Arch/aarch64/Aarch64_asm_utils.S
-        Arch/aarch64/vector_table.S
-        Arch/aarch64/SmapDisabler.cpp
-        Arch/aarch64/ScopedCritical.cpp
-
         MiniStdLib.cpp
         Heap/kmalloc.cpp
 
