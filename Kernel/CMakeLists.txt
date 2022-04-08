@@ -411,8 +411,20 @@ else()
         ${PREKERNEL_SOURCES}
         ${RPI_SOURCES}
 
-        MiniStdLib.cpp
+        Arch/aarch64/BootPPMParser.cpp
+        Arch/aarch64/CrashHandler.cpp
+        Arch/aarch64/Dummy.cpp
+        Arch/aarch64/MainIdRegister.cpp
+        Arch/aarch64/PageDirectory.cpp
+        Arch/aarch64/ScopedCritical.cpp
+        Arch/aarch64/SmapDisabler.cpp
+        Arch/aarch64/Utils.cpp
+        Arch/aarch64/init.cpp
+        Arch/aarch64/vector_table.S
+
+        # Files from base Kernel
         Heap/kmalloc.cpp
+        MiniStdLib.cpp
 
         Memory/AddressSpace.cpp
         Memory/AnonymousVMObject.cpp
