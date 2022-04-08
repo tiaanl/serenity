@@ -18,6 +18,39 @@
 #include <Kernel/Sections.h>
 #include <Kernel/UserOrKernelBuffer.h>
 
+// Memory
+namespace Kernel {
+namespace Memory {
+
+static MemoryManager* s_the;
+RecursiveSpinlock s_mm_lock { LockRank::MemoryManager };
+
+MemoryManager& MemoryManager::the()
+{
+    return *s_the;
+}
+
+ErrorOr<FlatPtr> page_round_up(FlatPtr)
+{
+    VERIFY_NOT_REACHED();
+    return EMAXERRNO;
+}
+
+ErrorOr<CommittedPhysicalPageSet> MemoryManager::commit_user_physical_pages(size_t)
+{
+    VERIFY_NOT_REACHED();
+    return EMAXERRNO;
+}
+
+ErrorOr<NonnullOwnPtr<Region>> MemoryManager::allocate_unbacked_region_anywhere(size_t, size_t)
+{
+    VERIFY_NOT_REACHED();
+    return EMAXERRNO;
+}
+
+}
+}
+
 // Scheduler
 namespace Kernel {
 

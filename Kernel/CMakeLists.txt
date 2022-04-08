@@ -425,23 +425,6 @@ else()
         # Files from base Kernel
         Heap/kmalloc.cpp
         MiniStdLib.cpp
-
-        Memory/AddressSpace.cpp
-        Memory/AnonymousVMObject.cpp
-        Memory/InodeVMObject.cpp
-        Memory/PhysicalRegion.cpp
-        Memory/PhysicalPage.cpp
-        Memory/PhysicalZone.cpp
-        Memory/PageDirectory.cpp
-        Memory/MemoryManager.cpp
-        Memory/PrivateInodeVMObject.cpp
-        Memory/Region.cpp
-        Memory/RegionTree.cpp
-        Memory/RingBuffer.cpp
-        Memory/SharedInodeVMObject.cpp
-        Memory/ScatterGatherList.cpp
-        Memory/VirtualRange.cpp
-        Memory/VMObject.cpp
     )
 
     # Otherwise linker errors e.g undefined reference to `__aarch64_cas8_acq_rel'
